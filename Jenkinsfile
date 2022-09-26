@@ -10,9 +10,15 @@ pipeline {
        }
      }
       
+     stage ('static parsing') {
+       steps {
+         bat 'mvn jtest:jtest -Djtest.config="builtin://Critical Rules"'
+       }
+     }
+      
      stage('archive artifacts') {
-            steps {
-                archiveArtifacts artifacts: 'target/ROOT.war'
+       steps {
+         archiveArtifacts artifacts: 'target/ROOT.war'
             }
         }
    }

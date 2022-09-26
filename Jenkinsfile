@@ -12,7 +12,7 @@ pipeline {
       
      stage ('static parsing') {
        steps {
-         bat 'mvn jtest:jtest -Djtest.config="builtin://Critical Rules"'
+         bat 'mvn jtest:jtest -Djtest.config="フロー解析.properties"'
        }
      }
       

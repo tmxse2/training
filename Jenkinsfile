@@ -6,8 +6,6 @@ pipeline {
    stages {
      stage ('build') {
        steps {
-         bat 'mvn -version'
-         bat 'jtestcli -version'
          bat 'mvn clean package'
        }
      }
